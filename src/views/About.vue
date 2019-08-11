@@ -3,7 +3,7 @@
     <svg width="1000" height="600">
       <path :d="pathData" fill="none" stroke="grey" stroke-width="5" />
     </svg>
-    <!-- <svg width="1000" height="600">
+    <svg width="1000" height="600">
       <rect
         v-for="(data,i) in chartData"
         style="fill:grey"
@@ -13,7 +13,7 @@
         width="1"
         :height="data"
       />
-    </svg>-->
+    </svg>
   </div>
 </template>
 

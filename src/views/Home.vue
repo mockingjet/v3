@@ -30,37 +30,37 @@ export default {
       let line = select("svg.line path");
       line.attr("d", $line(this.chartData));
     },
-    // drawBar() {
-    //   let bars = select("svg.bar")
-    //     .selectAll(".bars")
-    //     .data(this.chartData);
-    //   // ENTER
-    //   bars
-    //     .enter()
-    //     .append("rect")
-    //     .attr("class", "bars")
-    //     .style("fill", "steelblue")
-    //     .attr("x", (d, i) => i)
-    //     .attr("width", 1)
-    //     .attr("y", 0)
-    //     .attr("height", d => d);
+    drawBar() {
+      let bars = select("svg.bar")
+        .selectAll(".bars")
+        .data(this.chartData);
+      // ENTER
+      bars
+        .enter()
+        .append("rect")
+        .attr("class", "bars")
+        .style("fill", "steelblue")
+        .attr("x", (d, i) => i)
+        .attr("width", 1)
+        .attr("y", 0)
+        .attr("height", d => d);
 
-    //   // UPDATE
-    //   bars
-    //     .style("fill", "steelblue")
-    //     .attr("x", (d, i) => i)
-    //     .attr("width", 1)
-    //     .attr("y", 0)
-    //     .attr("height", d => d);
+      // UPDATE
+      bars
+        .style("fill", "steelblue")
+        .attr("x", (d, i) => i)
+        .attr("width", 1)
+        .attr("y", 0)
+        .attr("height", d => d);
 
-    //   // EXIT
-    //   bars.exit().remove();
-    // }
+      // EXIT
+      bars.exit().remove();
+    }
   },
   watch: {
     chartData() {
       this.drawLine();
-      // this.drawBar();
+      this.drawBar();
     }
   }
 };
